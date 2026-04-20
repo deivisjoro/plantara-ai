@@ -194,7 +194,7 @@ class _FlowersWidgetState extends State<FlowersWidget> {
                                               final category0 =
                                                   queryCategoryRecordList
                                                       .where((e) =>
-                                                          (int.tryParse(e.snapshotData['column_flowers'].toString()) == 0)
+                                                          int.tryParse(e.snapshotData['column_flowers'].toString()) == 0)
                                                       .sortedList(
                                                           keyOf: (e) =>
                                                               e.indexFlowers,
@@ -307,7 +307,7 @@ class _FlowersWidgetState extends State<FlowersWidget> {
                                               final category1 =
                                                   queryCategoryRecordList
                                                       .where((e) =>
-                                                          (int.tryParse(e.snapshotData['column_flowers'].toString()) == 1)
+                                                          int.tryParse(e.snapshotData['column_flowers'].toString()) == 1)
                                                       .sortedList(
                                                           keyOf: (e) =>
                                                               e.indexFlowers,
