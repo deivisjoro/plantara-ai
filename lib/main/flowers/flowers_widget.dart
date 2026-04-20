@@ -177,6 +177,22 @@ class _FlowersWidgetState extends State<FlowersWidget> {
                               List<CategoryRecord> queryCategoryRecordList =
                                   snapshot.data!;
 
+                              // DEBUG
+                              for (var doc in queryCategoryRecordList) {
+                                print('DOC: \${doc.reference.id} | column_flowers: \${doc.snapshotData[\'column_flowers\']} | type: \${doc.snapshotData[\'column_flowers\'].runtimeType}');
+                              }
+
+                              if (queryCategoryRecordList.isEmpty) {
+                                return Padding(
+                                  padding: EdgeInsets.all(16),
+                                  child: Text('DEBUG: 0 documentos recibidos', style: TextStyle(color: Colors.red, fontSize: 14)),
+                                );
+                              }
+
+                              // Show first doc raw data
+                              final firstDoc = queryCategoryRecordList.first;
+                              print('FIRST DOC RAW: \${firstDoc.snapshotData}');
+
                               return Container(
                                 decoration: BoxDecoration(),
                                 child: SingleChildScrollView(
