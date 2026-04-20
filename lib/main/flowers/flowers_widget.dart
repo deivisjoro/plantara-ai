@@ -1,4 +1,5 @@
 import '/backend/backend.dart';
+import 'package:firebase_core/firebase_core.dart';
 import '/components/navigation/navigation_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
@@ -191,7 +192,14 @@ class _FlowersWidgetState extends State<FlowersWidget> {
                               if (queryCategoryRecordList.isEmpty) {
                                 return Padding(
                                   padding: EdgeInsets.all(16),
-                                  child: Text('DEBUG: 0 documentos recibidos', style: TextStyle(color: Colors.red, fontSize: 14)),
+                                  child: Column(
+                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    children: [
+                                      Text('DEBUG: 0 documentos', style: TextStyle(color: Colors.red, fontSize: 12)),
+                                      Text('Firebase app: \${Firebase.app().name}', style: TextStyle(color: Colors.red, fontSize: 12)),
+                                      Text('Project: \${Firebase.app().options.projectId}', style: TextStyle(color: Colors.red, fontSize: 12)),
+                                    ],
+                                  ),
                                 );
                               }
 
