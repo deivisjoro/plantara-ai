@@ -2,9 +2,13 @@ import '/backend/backend.dart';
 import '/components/navigation/navigation_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:ui';
 import '/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
 import 'flowers_model.dart';
 export 'flowers_model.dart';
 
@@ -189,6 +193,12 @@ class _FlowersWidgetState extends State<FlowersWidget> {
                                             builder: (context) {
                                               final category0 =
                                                   queryCategoryRecordList
+                                                      .where((e) =>
+                                                          (e.snapshotData['column_flowers'] as num?)?.toInt() == 0)
+                                                      .sortedList(
+                                                          keyOf: (e) =>
+                                                              e.indexFlowers,
+                                                          desc: false)
                                                       .toList();
 
                                               return Row(
@@ -296,6 +306,12 @@ class _FlowersWidgetState extends State<FlowersWidget> {
                                             builder: (context) {
                                               final category1 =
                                                   queryCategoryRecordList
+                                                      .where((e) =>
+                                                          (e.snapshotData['column_flowers'] as num?)?.toInt() == 1)
+                                                      .sortedList(
+                                                          keyOf: (e) =>
+                                                              e.indexFlowers,
+                                                          desc: false)
                                                       .toList();
 
                                               return Row(
