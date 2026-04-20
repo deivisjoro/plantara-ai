@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "93651962085",
+    "project_id": "plantara-ai",
+    "storage_bucket": "plantara-ai.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:93651962085:android:24155e41142e08bab82c0c",
+        "android_client_info": {
+          "package_name": "com.plantara.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "93651962085-u3ko8k2h3o3dab6ub21fhtvef2qst56s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.plantara.app",
+            "certificate_hash": "9bbb3186b2189ef16d8f272bdab59362c395cbb4"
+          }
+        },
+        {
+          "client_id": "93651962085-rs6jjr7k3n5512rr7ljhmfshlqmlcj25.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDAwp_n1HMsUSVcyFuh0E8sJRrjRbIL3VQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "93651962085-rs6jjr7k3n5512rr7ljhmfshlqmlcj25.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "93651962085-etcr3a9pvb9m3fft943fbgea9ilkfh7k.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.plantara.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
