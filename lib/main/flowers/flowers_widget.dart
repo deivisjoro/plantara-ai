@@ -160,6 +160,12 @@ class _FlowersWidgetState extends State<FlowersWidget> {
                           StreamBuilder<List<CategoryRecord>>(
                             stream: queryCategoryRecord(),
                             builder: (context, snapshot) {
+                              if (snapshot.hasError) {
+                                return Padding(
+                                  padding: EdgeInsets.all(16),
+                                  child: Text('ERROR: ${snapshot.error.toString()}', style: TextStyle(color: Colors.red, fontSize: 12)),
+                                );
+                              }
                               // Customize what your widget looks like when it's loading.
                               if (!snapshot.hasData) {
                                 return Center(
